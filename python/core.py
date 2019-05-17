@@ -7,7 +7,6 @@ class Submission():
         except EOFError as e:
             pass
 
-    @abstractmethod
     def run_submission(self):
         raise NotImplementedError("Please implement run_submission in your " +
                 "submission class")
