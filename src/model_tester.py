@@ -15,8 +15,11 @@ INCLUDE_Y_VALUE = False
 argc = len(sys.argv)
 
 def log_pipe(pipe):
-    for line in iter(pipe.stderr.readline, b''):
-        print(line.decode('utf-8'))
+    try:
+        for line in iter(pipe.stderr.readline, b''):
+            print(line.decode('utf-8'))
+    except AttributeError as e:
+        pass
 
 def follow(the_process):
     while(True):
