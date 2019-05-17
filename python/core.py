@@ -4,10 +4,13 @@ class Submission():
     def __init__(self):
         try:
             self.run_submission()
-        except AttributeError():
-            e_print()
         except EOFError as e:
             pass
+
+    @abstractmethod
+    def run_submission(self):
+        raise NotImplementedError("Please implement run_submission in your " +
+                "submission class")
 
     def get_next_data(self):
         """
