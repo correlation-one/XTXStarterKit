@@ -8,11 +8,13 @@ import time, subprocess, sys, multiprocessing, os
 
 # Change these paths to point to your local machine
 cwd = os.getcwd()
-RESULT_LOCATION = os.path.join(cwd, 'result.txt')
+RESULT_LOCATION = os.path.join(cwd, 'scoring/result.txt')
 DATASET_LOCATION = os.path.join(cwd, 'data.csv')
-SCORE_LOCATION = os.path.join(cwd, 'score.txt')
+SCORE_LOCATION = os.path.join(cwd, 'scoring/score.txt')
+
 INCLUDE_Y_VALUE = False
 argc = len(sys.argv)
+
 
 def log_pipe(pipe):
     try:
